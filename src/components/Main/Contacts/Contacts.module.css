@@ -1,0 +1,95 @@
+/*.contacts {*/
+/*    border-radius: 12px;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    margin: 10px;*/
+/*}*/
+
+/*.contactInfo {*/
+/*    border: 1px solid teal;*/
+/*    display: grid;*/
+/*    grid-template-columns: 2fr 2fr;*/
+/*    margin: 10px;*/
+/*    border-radius: 10px;*/
+/*}*/
+
+/*.descriptionUser {*/
+/*    display: grid;*/
+/*    grid-template-rows: 2fr 2fr;*/
+/*}*/
+
+/*.userPhoto {*/
+/*    width: 50px;*/
+/*    height: 50px;*/
+/*    border-radius: 50%;*/
+/*}*/
+
+/*.list {*/
+/*    list-style: none;*/
+/*}*/
+
+.contacts {
+    background-color: #f8f8f8;
+    padding: 20px;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.userPhoto {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.descriptionUser {
+    display: flex;
+    flex-direction: column;
+}
+
+.descriptionUser p {
+    margin: 0;
+}
+
+.descriptionUser p span {
+    font-weight: bold;
+}
+
+.contactInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0088cc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #005580;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 136, 204, 0.4);
+}
