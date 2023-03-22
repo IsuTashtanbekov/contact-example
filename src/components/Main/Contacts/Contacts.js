@@ -4,14 +4,8 @@ import { FaUserEdit } from 'react-icons/fa';
 import MyModal from "../../../UI/Modal/MyModal";
 
 const Contacts = (props) => {
-    console.log(props.changeName)
     const [modalActive, setModalActive] = useState(false)
     const [editMode, setEditMode] = useState(true)
-    const [inputValue, setInputValue] = useState()
-    // useEffect(() => {
-    //
-    // }, [modalActive])
-
     const onNameChangeHandle = (id, e) => {
         props.changeName(id, e.currentTarget.value)
     }
@@ -74,6 +68,10 @@ const Contacts = (props) => {
                                        setActive={setModalActive}
                                        user={user}
                                    >
+                                       <input
+                                           type="text"
+                                           value={user.name}
+                                       />
                                    </MyModal>
                                    <button
                                        className={style.btn}
