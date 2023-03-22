@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import Contacts from "./Contacts";
 import {compose} from "redux";
 import {connect} from "react-redux";
-import {setUsers} from "../../../store/contact-reducer";
+import {changeName, setUsers} from "../../../store/contact-reducer";
 import axios from 'axios'
 
 const ContactsHoc = (props) => {
@@ -18,12 +18,13 @@ const ContactsHoc = (props) => {
 
 const mapStateToProps = (state) => {
     return {
-        users: state.Users
+        users: state.Users,
     }
 }
 
 export default compose(
     connect(mapStateToProps, {
-        setUsers
+        setUsers,
+        changeName
     })
 )(ContactsHoc);
