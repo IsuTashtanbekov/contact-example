@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/IsuTashtanbekov/contact-example.git/static/css/main.f39a71e7.css",
-    "main.js": "/IsuTashtanbekov/contact-example.git/static/js/main.eca0b20d.js",
-    "index.html": "/IsuTashtanbekov/contact-example.git/index.html",
-    "main.f39a71e7.css.map": "/IsuTashtanbekov/contact-example.git/static/css/main.f39a71e7.css.map",
-    "main.eca0b20d.js.map": "/IsuTashtanbekov/contact-example.git/static/js/main.eca0b20d.js.map"
+    "main.css": "/contact-example/static/css/main.f39a71e7.css",
+    "main.js": "/contact-example/static/js/main.eca0b20d.js",
+    "index.html": "/contact-example/index.html",
+    "main.f39a71e7.css.map": "/contact-example/static/css/main.f39a71e7.css.map",
+    "main.eca0b20d.js.map": "/contact-example/static/js/main.eca0b20d.js.map"
   },
   "entrypoints": [
     "static/css/main.f39a71e7.css",
