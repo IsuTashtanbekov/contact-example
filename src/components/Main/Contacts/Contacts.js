@@ -5,10 +5,10 @@ import MyModal from "../../../UI/Modal/MyModal";
 
 const Contacts = (props) => {
     const [modalActive, setModalActive] = useState(false)
-    const [editMode, setEditMode] = useState(true)
-    const onNameChangeHandle = (id, e) => {
-        props.changeName(id, e.currentTarget.value)
-    }
+    const [editMode, setEditMode] = useState(false)
+    // const onNameChangeHandle = (id, e) => {
+    //     props.changeName(id, e)
+    // }
 
     return (
         <div className={style.contacts}>
@@ -37,7 +37,7 @@ const Contacts = (props) => {
                                                <p>
                                            <input
                                                value={user.name}
-                                               onChange={(e) => onNameChangeHandle(user.id, e)}
+                                               onChange={event => props.changeName(user.id, event.currentTarget.value)}
                                                onClick={e => setEditMode(editMode? false : true)}
                                                autoFocus={true}
                                            />

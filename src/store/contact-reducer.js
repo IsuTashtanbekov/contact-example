@@ -41,6 +41,11 @@ export const contactReducer = (state = initialState, action) => {
                 )
             };
         }
+        case SORT_BY_REVERSE: {
+            return {
+                ...state, users: state.users.reverse()
+            }
+        }
         default:
             return state;
     }
@@ -53,5 +58,6 @@ export const searchContacts = (query) => ({
     payload: query
 });
 
+export const reverseSort = () => ({type:SORT_BY_REVERSE})
 
 export const changeName = (id, newName) => ({type:CHANGE_NAME, payload:{id: id, newName:newName }})

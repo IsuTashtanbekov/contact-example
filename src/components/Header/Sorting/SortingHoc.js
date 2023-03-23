@@ -2,7 +2,7 @@ import React from 'react';
 import Sorting from "./Sorting";
 import {connect} from "react-redux";
 import {compose} from "redux";
-import {sortByName} from "../../../store/contact-reducer";
+import {reverseSort, sortByName} from "../../../store/contact-reducer";
 
 const SortingHoc = (props) => {
     return (
@@ -17,5 +17,7 @@ const mapStateToProps = (state) => {
 }
 
 export default compose(
-    connect(mapStateToProps, {sortByName})
+    connect(mapStateToProps, {
+        sortByName,
+        reverseSort})
 )(SortingHoc);

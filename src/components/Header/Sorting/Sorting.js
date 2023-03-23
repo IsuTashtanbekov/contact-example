@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import style from './Sorting.module.css'
+import {reverseSort} from "../../../store/contact-reducer";
 
 const Sorting = (props) => {
 
@@ -11,12 +12,14 @@ const Sorting = (props) => {
         onSwitchMode(sortByName, setSortByName)
         if (sortByName === true) {
             props.sortByName()
+        } else if (sortByName === false) {
+
         }
     }
     const onSortByAlphabetically = e => {
         onSwitchMode(sortByAlphabetically,setSortAlphabetically)
-        if (sortByName === true) {
-            props.sortByName()
+        if (sortByAlphabetically === true) {
+            props.reverseSort()
         }
     }
 
@@ -30,19 +33,13 @@ const Sorting = (props) => {
 
     return (
         <aside>
-            {/*<select className={style.select}>*/}
-            {/*    <option value="" className={style.option}>По алфавиту</option>*/}
-            {/*    <option value="" className={style.option}>По </option>*/}
-            {/*    <option value="" className={style.option}>Op1</option>*/}
-            {/*    <option value="" className={style.option}>Op1</option>*/}
-            {/*    <option value="" className={style.option}>Op1</option>*/}
-            {/*</select>*/}
             <button className={style.sortingButton}>
                 Сортировка по алфавиту
                 <input
                     type="checkbox"
                     checked={sortByAlphabetically}
-                    onClick={ e => onSortByAlphabetically()}
+                    onClick={ e => onSwitchMode(sortByAlphabetically, setSortAlphabetically())}
+                    onChange={e => onSortByAlphabetically()}
                 />
             </button>
             <button className={style.sortingButton}>
@@ -50,7 +47,8 @@ const Sorting = (props) => {
                 <input
                     type="checkbox"
                     checked={sortByName}
-                    onClick={ e => onSortByName() }
+                    onClick={ e => onSwitchMode(sortByName, setSortByName()) }
+                    onChange={e => onSortByName()}
                 />
             </button>
         </aside>

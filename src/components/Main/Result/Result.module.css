@@ -1,0 +1,23 @@
+.select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    font-family: sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+
+.option {
+    padding: 0.25rem;
+    font-size: 0.9rem;
+    font-family: sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+
+.option:disabled {
+    color: #999;
+    background-color: #f9f9f9;
+}

@@ -25,6 +25,6 @@ const mapStateToProps = (state) => {
 export default compose(
     connect(mapStateToProps, {
         setUsers,
-        changeName
+        changeName,
     })
 )(ContactsHoc);

@@ -1,14 +1,18 @@
 import React from 'react';
+import styles from './Result.module.css';
 
 const Result = (props) => {
     return (
-        <div>
-            {props.filteredUsers.map( user => {
-                return <div>
-                    {user.name? user.name : <div>'Посты не найдены!'</div>}
-                </div>
+        <select className={styles.select}>
+            {props.filteredUsers.map(user => {
+                return user.length === 0 ? (<option>
+                    Контакты не найдены!
+                </option>) : (
+                    <option className={styles.option}>
+                        {user.length === 0 ? 'Посты не найдены!' : user.name}
+                    </option>)
             })}
-        </div>
+        </select>
     );
 };
 

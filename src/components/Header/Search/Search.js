@@ -11,7 +11,7 @@ const Search = (props) => {
         <form>
             <input
                 type="text"
-                placeholder='Напишите что-нубудь'
+                placeholder='Вы можете здесь найти контакт...'
                 className={style.searchInput}
                 value={inputValue}
                 onChange={e => onSearchHandle(e.currentTarget.value)}
